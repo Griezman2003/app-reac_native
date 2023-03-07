@@ -1,20 +1,41 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import * as React from 'react';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import{createDrawerNavigator} from '@react-navigation/drawer';
+import Loggin from './screen/logginScreen';
+import HomeScreen from "./screen/HomeScreen";
 
-export default function App() {
+
+
+const Drawer = createDrawerNavigator();
+
+export function DrawerNavigation() {
+
+    return (
+      <NavigationContainer>
+        <Drawer.Navigator>
+        <Drawer.Screen name = "Inicio" component= {HomeScreen}/>
+        </Drawer.Navigator>
+        </NavigationContainer>
+    )
+};
+
+
+
+
+const Stack = createNativeStackNavigator();
+const App = () =>{
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+      <Stack.Screen
+          name="Home"
+          component={Loggin}
+          options={{title: 'Iniciar sesion'}}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
