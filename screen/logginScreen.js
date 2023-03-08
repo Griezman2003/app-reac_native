@@ -1,78 +1,60 @@
-import React from "react";
-import {View, Text, Image, ScrollView, TextInput, StyleSheet} from 'react-native';
+import react from "react";
+import {View, Text, Image, ScrollView, TextInput,} from 'react-native';
 
-
-const Loggin = () => {
+const loggin = () => {
     return (
-  
       <ScrollView>
-        <View style={styles.container}>
-        <Text style={styles.bigBlue}> loggin</Text>
-          <Text></Text>
+        <Text style={{alignItems:"center", textAlign:"center",color:"black"}}>INICIO DE SESION</Text>
+        <View
+        style={{textAlign: 'center',}}>
+          <Text style={{marginBottom:20}}>LOGGIN</Text>
           <Image
             source={{
-              uri: 'https://sipol.kpu.go.id/img/user.png',
+              uri: 'https://www.nicepng.com/png/detail/207-2073249_open-user-icon-for-login-page.png',
             }}
-            style={{width: 200, height: 200, borderRadius: 10}}
+            style={{width: 200, height: 200,  alignSelf: 'center', borderRadius:25}}
           />
 
-        <TextInput
+        </View>
+        <TextInput                           
           style={{
+            textAlign: 'center',
             height: 40,
-            borderColor: 'black',
-            borderWidth: 1,
-            alignItems:"center",
-            textAlign: "center",
-            borderRadius:5,
-            marginTop:10,
+            borderRadius: 20,
+            borderWidth: 2,
+            backgroundColor: 'while',
+              borderColor: 'while',
+              alignItems: 'while',
+              marginLeft: 35,
+              marginRight: 35,
+              marginTop: 20,
+              marginBottom: 1,
+              boxshadow:1
           }}
-          placeholder="Usuario"
+          
+          placeholder = "usuario"
+          
+        />
+        <TextInput 
+         style={{
+          textAlign: 'center',
+          height: 40,
+          borderRadius: 20,
+          borderWidth: 2,
+          backgroundColor: 'while',
+            borderColor: 'while',
+            alignItems: 'center',
+            marginLeft: 35,
+            marginRight: 35,
+            marginTop: 20,
+            marginBottom: 1,
+            
+            
+          }}
+          placeholder = "usuario"
           />
-         <TextInput
-          style={{
-            height: 40,
-            borderColor: 'black',
-            borderWidth: 1,
-            alignItems: "center",
-            textAlign: "center",
-            borderRadius:5,
-            marginTop:10,
-            width:"auto"
-          }}
-          placeholder="Contraseña"
-          />
-          <button>
-          style={{
-            height: 40,
-            borderColor: 'black',
-            borderWidth: 1,
-            alignItems: "center",
-            textAlign: "center",
-            borderRadius:5,
-            marginTop:10,
-            width:"auto"
-          }}
-          </button>
-          </View>
       </ScrollView>
-      
     );
   };
-  const styles = StyleSheet.create({
-    container :{
-      marginTop: 5,
-      alignItems: "center",
-      backgroundColor:'#c3e3fd',
-      height:'auto'
-
-  },
-  bigBlue: {
-    color: 'black',
-    fontWeight: 'bold',
-    fontSize: 30,
-  },
-  body: {
- alignItems:"center"
-}});
-
-  export default Loggin;
+  
+  export default loggin;
